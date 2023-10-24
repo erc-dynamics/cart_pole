@@ -34,7 +34,7 @@ Clone this repository inside `src/` folder of your ROS workspace. A recommended 
 Run `catkin_make` in `catkin_ws/` directory to compile the `cart_pole` package.
 
 ## Run
-Before running the simulation, run the following commands in terminal. Do not FORGET to replace the IPaddress with your Ubuntu machine IP address.
+Before running the simulation, run the following commands in terminal. Do not FORGET to replace the `<IPaddress>` with your Ubuntu machine IP address.
 
 ```bash
 echo "export ROS_MASTER_URI=http://<IPaddress>:11311" >> ~/.bashrc
