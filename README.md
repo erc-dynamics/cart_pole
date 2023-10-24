@@ -25,12 +25,12 @@ This co-simulation framework is developed in the erc-dynamics Lab. Please use wi
 
 ## Build (Ubuntu 20.04)
 Clone this repository inside `src/` folder of your ROS workspace. A recommended directory structure would look like so:
-
+```bash
 ├── catkin_ws/
 │   ├── src/
 │   │   └── cart_pole/
 │   ├── devel/
 │   └── build/
-
+```
 
 If you use this co-simulation for your work, please cite the ISAS 2023 paper that describes it in full detail.
