@@ -35,6 +35,7 @@ Run `catkin_make` in `catkin_ws/` directory to compile the `cart_pole` package.
 
 ## Run
 To run the co-simulation, this package features `cosimulation.launch` file that starts Gazebo with `cart_pole.world` file with necessary ROS nodes. The simplest way to launch the co-simulation is:
+
 ```bash
 roslaunch cart_pole cosimulation.launch
 ```
