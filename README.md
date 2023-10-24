@@ -39,6 +39,15 @@ To run the co-simulation, this package features `cosimulation.launch` file that 
 roslaunch cart_pole cosimulation.launch
 ```
 
+Once launched, you can execute the Matlab code to initiate simulations as required.
+
+### Manually launching the simulation
+You can also run the simulation manually without Matlab. To do that you can use the launch file `gazebo.launch`. 
+
+```bash
+roslaunch cart_pole cosimulation.launch
+```
+
 ## License and Usage
 This co-simulation framework is developed in the erc-dynamics Lab. Please use wisely, and recommend improvements!
 If you use this co-simulation for your work, please cite the ISAS 2023 paper that describes it in full detail.
