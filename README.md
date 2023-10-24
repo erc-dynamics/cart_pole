@@ -29,6 +29,7 @@ Clone this repository inside `src/` folder of your ROS workspace. A recommended 
 │   ├── devel/
 │   └── build/
 ```
+
 Run `catkin_make` in `catkin_ws/` directory to compile the `cart_pole` package.
 
 ## License and Usage
