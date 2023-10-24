@@ -25,7 +25,6 @@ This co-simulation framework is developed in the erc-dynamics Lab. Please use wi
 
 ## Build (Ubuntu 20.04)
 Clone this repository inside `src/` folder of your ROS workspace. A recommended directory structure would look like so:
-- my_awesome_flight_project/
 ├── catkin_ws/
 │   ├── src/
 │   │   ├── cart_pole
