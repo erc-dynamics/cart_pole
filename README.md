@@ -24,12 +24,13 @@ The Windows machine runs Matlab, which needs to interface with ROS.
 This co-simulation framework is developed in the erc-dynamics Lab. Please use wisely, and recommend improvements!
 
 ## Build (Ubuntu 20.04)
-Clone this repository inside `src/` folder of your ROS workspace. A recommended directory structure would look like so:```
+Clone this repository inside `src/` folder of your ROS workspace. A recommended directory structure would look like so:
+
 ├── catkin_ws/
 │   ├── src/
 │   │   └── cart_pole/
 │   ├── devel/
 │   └── build/
-```
+
 
 If you use this co-simulation for your work, please cite the ISAS 2023 paper that describes it in full detail.
