@@ -1,0 +1,44 @@
+<!-- this launch file runs the simulation manually from Ubuntu machine -->
+<launch>
+    <arg name="paused" default="true" />
+    <arg name="use_sim_time" default="true" />
+    <arg name="gui" default="true" />
+    <arg name="headless" default="false" />
+    <arg name="debug" default="false" />
+
+    <!-- set the robot launch parameters here -->
+    <!-- M_c, M_p, l, lqr gains -->
+    <arg name="arg_mc" default="1.5" />
+    <arg name="arg_mp" default="0.5" />
+    <arg name="arg_l" default="1"/>
+    <arg name="arg_k1" default="-0.8935" />
+    <arg name="arg_k2" default="16.7650" />
+    <arg name="arg_k3" default="-1.7750" />
+    <arg name="arg_k4" default="5.0945" />
+
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name"  value="$(find cart_pole)/cart_pole.world"/>
+        <arg name="debug" value="$(arg debug)" />
+        <arg name="gui" value="$(arg gui)" />
+        <arg name="paused" value="$(arg paused)" />
+        <arg name="use_sim_time" value="$(arg use_sim_time)" />
+        <arg name="headless" value="$(arg headless)" />
+    </include>
+
+    <param name="robot_description" command="$(find xacro)/xacro --inorder
+                                             '$(find cart_pole)/urdf/robot.xacro'
+                                             mc:=$(arg arg_mc)
+                                             mp:=$(arg arg_mp)
+                                             l:=$(arg arg_l)
+                                             k1:=$(arg arg_k1)
+                                             k2:=$(arg arg_k2)
+                                             k3:=$(arg arg_k3)
+                                             k4:=$(arg arg_k4)" />
+
+    
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-urdf -model robot -param robot_description"/>
+
+    <node name="plotter" pkg="cart_pole" type="plotter.py" output="screen"/>
+</launch>

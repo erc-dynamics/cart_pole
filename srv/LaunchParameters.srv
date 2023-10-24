@@ -1,0 +1,10 @@
+# LaunchParameters.srv
+float64 mc
+float64 mp
+float64 l
+float64 k1
+float64 k2
+float64 k3
+float64 k4
+---
+bool success

@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+<!-- gazebo world file -->
+<!-- if you want to speed up the simulation change -->
+<!-- real_time_update_rate and max_step_size -->
+<!-- their product gives real_time_factor -->
+  <world name="default">
+
+    <plugin name="time_limit" filename="libgazebo_ros_time_limit.so">
+      <max_time>20.0</max_time> <!-- Set the maximum simulation time in seconds -->
+    </plugin>
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <physics name='default_physics' default='0' type='ode'>
+<!--  the max step size is set to 0.001 by default. -->
+<!--  When increasing it, the simulation quality may suffer. -->
+<!--  this factor actually is computed by multiplying the other two -->
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate> 
+    </physics>
+  </world>
+</sdf>

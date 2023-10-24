@@ -1,0 +1,22 @@
+<!-- This launch file is for displaying and visualizing the robot on rviz -->
+<!-- It does not feature any control or motion -->
+<!-- If in any case, you want to change robot configuration or the model completely -->
+<!-- and you need to visualize the robot or debug the URDF or Xacro file, you can use this launch file -->
+
+<launch>
+    <!-- model argument -->
+    <!-- make sure the path to the model is correct -->
+    <arg name="model" default="$(find cart_pole)/urdf/robot.xacro" />
+    <!-- gui argument to either launch joint_state_publisher or joint_state_publisher_gui -->
+    <!-- joint_state_publisher_gui allows you to set displacement to joints -->
+    <arg name="gui" default="true" />
+    <arg name="rvizconfig" default="$(find cart_pole)/rviz/urdf.rviz" />
+
+    <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+
+    <node if="$(arg gui)" name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+    <node unless="$(arg gui)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+</launch>

@@ -1,0 +1,22 @@
+<!-- Launch this launch file for cosimulation -->
+<!-- upon launch, a ros service '/start_simulation' will be created -->
+<!-- which will wait for matlab to send a request. -->
+<!-- when the request is sent, it will start the simulation -->
+<launch>
+    <arg name="paused" default="true" />
+    <arg name="use_sim_time" default="true" />
+    <arg name="gui" default="true" />
+    <arg name="headless" default="false" />
+    <arg name="debug" default="false" />
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name"  value="$(find cart_pole)/cart_pole.world"/>
+        <arg name="debug" value="$(arg debug)" />
+        <arg name="gui" value="$(arg gui)" />
+        <arg name="paused" value="$(arg paused)" />
+        <arg name="use_sim_time" value="$(arg use_sim_time)" />
+        <arg name="headless" value="$(arg headless)" />
+    </include>
+
+    <node name="cosimulation" pkg="cart_pole" type="simulation.py" output="screen"/>
+</launch>
