@@ -34,6 +34,13 @@ Clone this repository inside `src/` folder of your ROS workspace. A recommended 
 Run `catkin_make` in `catkin_ws/` directory to compile the `cart_pole` package.
 
 ## Run
+Before running the simulation, run the following commands in terminal. Do not FORGET to replace the IP address with your Ubuntu machine IP address.
+```bash
+echo "export ROS_MASTER_URI=http://10.70.192.14:11311" >> ~/.bashrc
+echo "export ROS_IP=10.70.192.14 >> ~/.bashrc
+source ~/.bashrc
+```
+
 To run the co-simulation, this package features `cosimulation.launch` file that starts Gazebo with `cart_pole.world` file with necessary ROS nodes. The simplest way to launch the co-simulation is:
 
 ```bash
