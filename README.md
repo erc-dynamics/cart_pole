@@ -32,6 +32,12 @@ Clone this repository inside `src/` folder of your ROS workspace. A recommended 
 
 Run `catkin_make` in `catkin_ws/` directory to compile the `cart_pole` package.
 
+## Run
+To run the co-simulation, this package features `cosimulation.launch` file that starts Gazebo with `cart_pole.world` file with necessary ROS nodes. The simplest way to launch the co-simulation is:
+```bash
+roslaunch cart_pole cosimulation.launch
+```
+
 ## License and Usage
 This co-simulation framework is developed in the erc-dynamics Lab. Please use wisely, and recommend improvements!
 If you use this co-simulation for your work, please cite the ISAS 2023 paper that describes it in full detail.
