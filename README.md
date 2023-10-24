@@ -22,6 +22,7 @@ The Windows machine runs Matlab, which needs to interface with ROS.
 
 ## Build (Ubuntu 20.04)
 Clone this repository inside `src/` folder of your ROS workspace. A recommended directory structure would look like so:
+
 ```bash
 ├── catkin_ws/
 │   ├── src/
