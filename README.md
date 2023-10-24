@@ -29,6 +29,8 @@ Clone this repository inside `src/` folder of your ROS workspace. A recommended 
 │   ├── devel/
 │   └── build/
 ```
+Run `catkin_make` in `catkin_ws/` directory to compile the `cart_pole` package.
+
 ## License and Usage
 This co-simulation framework is developed in the erc-dynamics Lab. Please use wisely, and recommend improvements!
 If you use this co-simulation for your work, please cite the ISAS 2023 paper that describes it in full detail.
