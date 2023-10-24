@@ -20,7 +20,7 @@ The Windows machine runs Matlab, which needs to interface with ROS.
 - Matlab: Ensure that your Matlab has the [ROS Toolbox](https://www.mathworks.com/products/ros.html) installed.
 - Later, we will have to generate a Matlab custom message for ROS.  Based on the Matlab documentation provided [here](https://www.mathworks.com/support/requirements/supported-compilers.html), your machine should have one of the following installed to generate a ROS custom message: `Microsoft Visual C++ 2022 product family`, `Microsoft Visual C++ 2019 product family` or `Microsoft Visual C++ 2017 product family`. You can download `Microsoft Visual C++ 2017 product family` from this [link](https://learn.microsoft.com/en-ca/visualstudio/releasenotes/vs2017-relnotes). Links for other Visual Studio versions are readily available online.
 - Read and follow the Build and Run instructions [here](https://github.com/erc-dynamics/Matlab_cart_pole_cosimulation/blob/main/README.md#build-windows) to setup your Windows machine for co-simulation.
-- [Matlab Repository](https://github.com/erc-dynamics/Matlab_cart_pole_cosimulation.git)
+- [Matlab repository](https://github.com/erc-dynamics/Matlab_cart_pole_cosimulation.git)
 
 ## Build (Ubuntu 20.04)
 Clone this repository inside `src/` folder of your ROS workspace. A recommended directory structure would look like so:
